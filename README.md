@@ -1,2 +1,10 @@
 # heroicons-vite-typescript-problem
-This repo shows the issue with heroicons in combination with vite/vue/typescript.
+This repo shows the problem with heroicons in combination with vite/vue/typescript.
+
+Just run `npm run build` to reveal this issue for every icon:
+
+```cmd
+node_modules/@heroicons/vue/solid/ZoomOutIcon.d.ts:1:30 - error TS2339: Property 'DefineComponent' does not exist on type 'Promise<{ default: typeof import("d:/git/heroicons-vite-typescript-problem/node_modules/vue/dist/vue"); compile(template: string | HTMLElement, options?: CompilerOptions | undefined): RenderFunction; ... 143 more ...; withScopeId: (_id: string) => (fn: Function, ctx?: ComponentInternalInstance | ... 1 more ... | und...'.
+
+1 export default import("vue").DefineComponent;
+```
